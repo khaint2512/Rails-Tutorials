@@ -1,10 +1,10 @@
 <% provide(:title, "About") %>
-<h1>About</h1>
+<h1><%= t(".title") %></h1>
 <p>
-  The <%= link_to "Ruby on Rails Tutorial", 'https://www.railstutorial.org/' %> is a
-  <%= link_to "book", 'https://www.railstutorial.org/book' %> and
-  <%= link_to "screencast series", 'http://screencasts.railstutorial.org/' %>
+  The <%= link_to "Ruby on Rails Tutorial", Settings.rails.url %> is a
+  <%= link_to "book", Settings.rails.book %> and
+  <%= link_to "screencast series", Settings.screencast.url %>
   to teach web development with
-  <%= link_to "Ruby on Rails", 'http://rubyonrails.org/' %>
-  This is the sample application for the tutorial.
+  <%= link_to "Ruby on Rails", Settings.ruby_on_rails.url %>
+  <%= t(".body") %>
 </p>

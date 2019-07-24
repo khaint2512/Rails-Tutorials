@@ -1,0 +1,14 @@
+rails:
+  url: "https://www.railstutorial.org"
+  book: "https://www.railstutorial.org/book"
+  help: "https://www.railstutorial.org/help"
+ruby_on_rails:
+  url: "http://rubyonrails.org"
+screencast:
+  url: "http://screencasts.railstutorial.org"
+author:
+  url: "http://www.michaelhartl.com/"
+news:
+  url: "http://news.railstutorial.org/"
+contact:
+  url: "https://www.railstutorial.org/contact"
