@@ -25,14 +25,25 @@ en:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
       full_title: "Welcome to the sample app"
+    header:
+      logo: "Sample app"
+      nav:
+        home: "Home"
+        help: "Help"
+        log_in: "Log in"
+    footer:
+      title: "The %{rails_tutorial} by %{rails_author}"
+      content:
+        rails_tutorial: "Ruby on Rails Tutorial"
+        rails_author: "Michael Hartl"
   static_pages:
     base:
       header: "StaticPage"
     about:
       title: "about"
       content:
-        main: "The %{rails_toturial} is a %{rails_book} and %{screencast} to teach web development with %{ruby_on_rails}. This is the sample application for the tutorial."
-        rails_toturial: Ruby on Rails Tutorial
+        main: "The %{rails_tutorial} is a %{rails_book} and %{screencast} to teach web development with %{ruby_on_rails}. This is the sample application for the tutorial."
+        rails_tutorial: Ruby on Rails Tutorial
         rails_book: book
         screencast: screencast series
         ruby_on_rails: Ruby on Rails
@@ -49,6 +60,7 @@ en:
       content:
         main: "This is the home page for the %{rails_url} sample application."
         rails: "Ruby On Rails Tutorial"
+        sign_up: "Sign up now !"
     contact:
       title: Contact
       paragraph: Contact the Ruby on Rails Tutorial about the sample app at the %{rails_contact}.

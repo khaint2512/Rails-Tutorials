@@ -12,3 +12,9 @@ news:
   url: "http://news.railstutorial.org/"
 contact:
   url: "https://www.railstutorial.org/contact"
+layouts:
+  logo: "#"
+  home: "#"
+  help: "#"
+  login: "#"
+  sign_up: "#"
