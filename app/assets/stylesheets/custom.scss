@@ -1,10 +1,6 @@
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
-
-$light-gray: #777;
-$white: #fff;
-$gray: #555;
-$black: #222;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "color";
 
 body{
   padding-top: 60px;

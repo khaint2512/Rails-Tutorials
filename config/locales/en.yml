@@ -36,17 +36,20 @@ en:
       content:
         rails_tutorial: "Ruby on Rails Tutorial"
         rails_author: "Michael Hartl"
+        about: "About"
+        contact: "Contact"
+        news: "News"
   static_pages:
     base:
       header: "StaticPage"
     about:
-      title: "about"
+      title: "About"
       content:
         main: "The %{rails_tutorial} is a %{rails_book} and %{screencast} to teach web development with %{ruby_on_rails}. This is the sample application for the tutorial."
-        rails_tutorial: Ruby on Rails Tutorial
-        rails_book: book
-        screencast: screencast series
-        ruby_on_rails: Ruby on Rails
+        rails_tutorial: "Ruby on Rails Tutorial"
+        rails_book: "book"
+        screencast: "screencast series"
+        ruby_on_rails: "Ruby on Rails"
     help:
       title: "Help"
       content:

@@ -18,3 +18,5 @@ layouts:
   help: "#"
   login: "#"
   sign_up: "#"
+  about: "#"
+  contact: "#"

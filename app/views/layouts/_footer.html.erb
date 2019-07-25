@@ -4,9 +4,9 @@
   </small>
   <nav>
     <ul>
-      <li><%= link_to "About", "#" %></li>
-      <li><%= link_to "Contact", "#" %></li>
-      <li><%= link_to "News", Settings.news.url %></li>
+      <li><%= link_to(t(".content.about"), Settings.layouts.about) %></li>
+      <li><%= link_to(t(".content.contact"), Settings.layouts.contact) %></li>
+      <li><%= link_to(t(".content.news"), Settings.news.url) %></li>
     </ul>
   </nav>
 </footer>
