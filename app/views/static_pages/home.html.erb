@@ -4,7 +4,7 @@
     <%= raw t(".content.main", rails_url: link_to(t(".content.rails"), Settings.rails.url)) %>
   </h2>
 
-  <%= link_to t(".content.sign_up"), Settings.layouts.sign_up, class: "btn btn-lg btn-primary" %>
+  <%= link_to t(".content.sign_up"), signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 
 <%= link_to image_tag("rails.png", alt: "Rails logo"),
