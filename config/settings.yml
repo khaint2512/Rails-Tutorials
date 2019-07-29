@@ -19,3 +19,11 @@ layouts:
   login: "#"
   about: "#"
   contact: "#"
+user:
+  name:
+    max_length: 50
+  password:
+    min_length: 6
+  email:
+    regex_valid: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+    max_length: 255
