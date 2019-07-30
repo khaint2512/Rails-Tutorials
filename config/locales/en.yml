@@ -39,6 +39,10 @@ en:
         about: "About"
         contact: "Contact"
         news: "News"
+  shared:
+    error_messages:
+      alert: "The form contains"
+      errors: "errors"
   static_pages:
     base:
       header: "StaticPage"

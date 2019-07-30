@@ -11,6 +11,9 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# Ignore file .vscode
+.vscode/settings.json
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
