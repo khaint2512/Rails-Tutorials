@@ -1,0 +1,5 @@
+<% provide :title, t(".title)") %>
+<h1><%= t(".title") %></h1>
+<p>
+  <%= raw t(".paragraph", rails_contact: link_to(t(".rails_contact"), Settings.contact.url))  %>
+</p>

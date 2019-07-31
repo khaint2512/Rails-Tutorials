@@ -1,0 +1,5 @@
+<% provide :title, t(".title") %>
+<h1><%= t(".title") %></h1>
+<p>
+  <%= raw t(".content.main", rails_tutorial: link_to(t(".content.rails_tutorial"), Settings.rails.url), rails_book: link_to(t("content.rails_book"), Settings.rails.book), screencast: link_to(t(".content.screencast"), Settings.screencast.url), ruby_on_rails: link_to(t(".content.ruby_on_rails"), Settings.ruby_on_rails.url)) %>
+</p>

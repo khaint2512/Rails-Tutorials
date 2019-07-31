@@ -1,0 +1,12 @@
+<footer class="footer">
+  <small>
+  <%= raw t(".title", rails_tutorial: link_to(t(".content.rails_tutorial"), Settings.rails.url), rails_author: link_to(t(".content.rails_author"), Settings.author.url)) %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to(t(".content.about"), Settings.layouts.about) %></li>
+      <li><%= link_to(t(".content.contact"), Settings.layouts.contact) %></li>
+      <li><%= link_to(t(".content.news"), Settings.news.url) %></li>
+    </ul>
+  </nav>
+</footer>

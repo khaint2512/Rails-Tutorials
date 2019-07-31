@@ -1,0 +1,29 @@
+rails:
+  url: "https://www.railstutorial.org"
+  book: "https://www.railstutorial.org/book"
+  help: "https://www.railstutorial.org/help"
+ruby_on_rails:
+  url: "http://rubyonrails.org"
+screencast:
+  url: "http://screencasts.railstutorial.org"
+author:
+  url: "http://www.michaelhartl.com/"
+news:
+  url: "http://news.railstutorial.org/"
+contact:
+  url: "https://www.railstutorial.org/contact"
+layouts:
+  logo: "#"
+  home: "#"
+  help: "#"
+  login: "#"
+  about: "#"
+  contact: "#"
+user:
+  name:
+    max_length: 50
+  password:
+    min_length: 6
+  email:
+    regex_valid: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+    max_length: 255

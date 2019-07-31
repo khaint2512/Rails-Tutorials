@@ -21,3 +21,58 @@
 
 en:
   hello: "Hello world"
+  layouts:
+    application:
+      base_title: "Ruby on Rails Tutorial Sample App"
+      full_title: "Welcome to the sample app"
+    header:
+      logo: "Sample app"
+      nav:
+        home: "Home"
+        help: "Help"
+        log_in: "Log in"
+    footer:
+      title: "The %{rails_tutorial} by %{rails_author}"
+      content:
+        rails_tutorial: "Ruby on Rails Tutorial"
+        rails_author: "Michael Hartl"
+        about: "About"
+        contact: "Contact"
+        news: "News"
+  static_pages:
+    base:
+      header: "StaticPage"
+    about:
+      title: "About"
+      content:
+        main: "The %{rails_tutorial} is a %{rails_book} and %{screencast} to teach web development with %{ruby_on_rails}. This is the sample application for the tutorial."
+        rails_tutorial: "Ruby on Rails Tutorial"
+        rails_book: "book"
+        screencast: "screencast series"
+        ruby_on_rails: "Ruby on Rails"
+    help:
+      title: "Help"
+      content:
+        main: "Get help on the Ruby on Rails Tutorial at the %{rails_help}. To get help on this sample app, see the %{rails_book}."
+        rails_help: "Rails Tutorial help section"
+        rails_book: "%{rails_book_important} book"
+        rails_book_important: "Ruby on Rails Tutorial"
+    home:
+      title: "Welcome to the Sample App"
+      header: "Sample App"
+      content:
+        main: "This is the home page for the %{rails_url} sample application."
+        rails: "Ruby On Rails Tutorial"
+        sign_up: "Sign up now !"
+    contact:
+      title: Contact
+      paragraph: Contact the Ruby on Rails Tutorial about the sample app at the %{rails_contact}.
+      rails_contact: contact page
+    about:
+      title: About
+      body: This is the sample application for the tutorial.
+  users:
+    new:
+      title: "Sign up"
+      header: "Sign up"
+      content: "This will be a signup page for new users."

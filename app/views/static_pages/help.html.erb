@@ -1,2 +1,6 @@
-<h1>StaticPages#help</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<% provide :title, t(".title") %>
+<h1><%= t(".title") %></h1>
+<p>
+  <%= raw t(".content.main", rails_help: link_to(t(".content.rails_help"), Settings.rails.help), rails_book: link_to(raw(t(".content.rails_book", rails_book_important: "<em>#{t(".content.rails_book_important")}</em>")), Settings.rails.book)) %>
+</p>
+</p>
