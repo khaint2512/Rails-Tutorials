@@ -26,3 +26,4 @@ user:
     min_length: 6
   email:
     regex_valid: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+    max_length: 255

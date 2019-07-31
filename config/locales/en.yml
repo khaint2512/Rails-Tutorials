@@ -75,3 +75,4 @@ en:
     new:
       title: "Sign up"
       header: "Sign up"
+      content: "This will be a signup page for new users."
