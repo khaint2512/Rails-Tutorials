@@ -39,6 +39,11 @@ en:
         about: "About"
         contact: "Contact"
         news: "News"
+  sessions:
+    new:
+      title: "Log in"
+      p: "New user?"
+      signup: "Sign up now!"
   shared:
     error_messages:
       alert: "The form contains"
