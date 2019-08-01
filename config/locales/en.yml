@@ -44,6 +44,9 @@ en:
       title: "Log in"
       p: "New user?"
       signup: "Sign up now!"
+    create:
+      flash:
+        danger: "Invalid email/password combination"
   shared:
     error_messages:
       alert: "The form contains"
