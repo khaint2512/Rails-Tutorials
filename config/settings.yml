@@ -19,6 +19,8 @@ layouts:
   login: "#"
   about: "#"
   contact: "#"
+  users: "#"
+  setting: "#"
 user:
   name:
     max_length: 50

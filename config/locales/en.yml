@@ -31,6 +31,11 @@ en:
         home: "Home"
         help: "Help"
         log_in: "Log in"
+        users: "Users"
+        account: "Account"
+        profile: "Profile"
+        setting: "Settings"
+        logout: "Log out"
     footer:
       title: "The %{rails_tutorial} by %{rails_author}"
       content:
