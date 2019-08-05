@@ -1,10 +1,29 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
+<<<<<<< HEAD
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
 
   def index
     @users = User.paginate page: params[:page]
+=======
+  before_action :logged_in_user, only: %i(:index, :edit, :update, :destroy)
+  before_action :correct_user, only: %i(:edit, :update)
+  before_action :admin_user, only: :destroy
+
+  def index
+    @users = User.paginates_per page: params[:page]
+>>>>>>> Start chapter 10
+=======
+  before_action :logged_in_user, only: %i(index, edit, update, destroy)
+  before_action :correct_user, only: %i(edit, update)
+  before_action :admin_user, only: %i(destroy)
+  before_action :load_user, only: %i(show, edit, update, destroy)
+
+  def index
+    @users = User.page(params[:page]).per Settings.controllers.users.index.per_page
+>>>>>>> Edited
   end
 
   def show
@@ -65,13 +84,13 @@ class UsersController < ApplicationController
     render file: "public/404.html", status: :user_not_found
   end
 
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = t ".danger"
-        redirect_to login_url
-      end
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t ".danger"
+      redirect_to login_url
     end
+  end
 
   def logged_in_user
     return unless logged_in?
