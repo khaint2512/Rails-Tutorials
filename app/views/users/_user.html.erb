@@ -1,7 +1,15 @@
 <li>
+<<<<<<< HEAD
   <%= gravatar_for user, size: 50 %>
+=======
+  <%= gravatar_for user, size: Settings.user.gravatar_user %>
+>>>>>>> Start chapter 10
   <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user?(user) %>
     <%= link_to t(".delete"), user, method: :delete, data: {confirm: t(".confirm")} %>
   <% end %>
+<<<<<<< HEAD
 </li
+=======
+</li>
+>>>>>>> Start chapter 10

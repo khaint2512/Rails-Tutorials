@@ -9,7 +9,11 @@ module SessionsHelper
     cookies.permanent[:remember_token] = user.remember_token
   end
 
+<<<<<<< HEAD
   def current_user?(user)
+=======
+  def current_user? user
+>>>>>>> Start chapter 10
     user == current_user
   end
 
