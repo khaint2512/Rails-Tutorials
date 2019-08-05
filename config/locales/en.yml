@@ -90,7 +90,32 @@ en:
       title: About
       body: This is the sample application for the tutorial.
   users:
+    user:
+      delete: "Delete"
+      confirm: "You sure ?"
+    edit:
+      title: "Edit user"
+      h1: "Update your profile"
+      password_confirmation: "Confirmation"
+      button: "Save changes"
+      change: "change"
+    index:
+      title: "All users"
+      danger: "Please log in."
     new:
       title: "Sign up"
       header: "Sign up"
       content: "This will be a signup page for new users."
+      signup_form:
+        password_confirmation: "Confirmation"
+        submit_button: "Create my account"
+    create:
+      flash:
+        success: "Welcome to the Sample App!"
+    update:
+      flash:
+        success: "Profile updated"
+    destroy:
+      flash:
+        success: "User deleted"
+        danger: "User can't be deleted"
