@@ -21,6 +21,21 @@
 
 en:
   hello: "Hello world"
+  controllers:
+    account_activations_controller:
+      edit:
+        flash:
+          success: "Account activated!"
+          danger: "Invalid activation link"
+    session_controller:
+      create:
+        message: "Check your email for the activation link."
+        message_warning: "Account not activated."
+    password_resets_controller:
+      create:
+        flash:
+          info: "Email sent with password reset instructions"
+          danger: "Email address not found"
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
@@ -44,12 +59,32 @@ en:
         about: "About"
         contact: "Contact"
         news: "News"
+  password_resets:
+    new:
+      title: "Forgot password"
+      submit: "Submit"
+    edit:
+      title: "Reset password"
+      confirmation: "Confirmation"
+      update_password: "Update password"
+    create:
+      flash:
+        info: "Email sent with password reset instructions"
+        danger: "Email address not found"
+    update:
+      flash:
+        danger: "can't be empty"
+        success: "Password has been reset."
+    check_expiration:
+      flash:
+        danger: "Password reset has expired."
   sessions:
     new:
       title: "Log in"
       p: "New user?"
       signup: "Sign up now!"
       remember_me: "Remember me on this computer"
+      forgot_password: "(forgot password)"
     create:
       flash:
         danger: "Invalid email/password combination"
@@ -89,6 +124,21 @@ en:
     about:
       title: About
       body: This is the sample application for the tutorial.
+  user_mailer:
+    account_activation:
+      h1: "Sample App"
+      p: "find me in app/views/user_mailer/account_activation.html.erb"
+      greeting: "Hi"
+      subject: "Account activation"
+      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+    password_reset:
+      greeting: "Hi"
+      subject: "Password reset"
+      reset: "Reset password"
+      p1: "To reset your password click the link below:"
+      p2: "This link will expire in two hours."
+      p3: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
   users:
     user:
       delete: "Delete"
@@ -111,7 +161,7 @@ en:
         submit_button: "Create my account"
     create:
       flash:
-        success: "Welcome to the Sample App!"
+        info: "Please check your email to activate your account."
     update:
       flash:
         success: "Profile updated"
