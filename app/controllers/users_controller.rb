@@ -74,6 +74,22 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def update
+    @user = User.find_by id: params[:id]
+    if @user.update_attributes(user_params)
+      flash[:success] = t ".flash.success"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    User.find_by id: (params[:id]).destroy
+    flash[:success] = t ".flash.success"
+    redirect_to users_url
+  end
+
   private
 
     def user_params
