@@ -49,6 +49,7 @@ en:
       title: "Log in"
       p: "New user?"
       signup: "Sign up now!"
+      remember_me: "Remember me on this computer"
     create:
       flash:
         danger: "Invalid email/password combination"
