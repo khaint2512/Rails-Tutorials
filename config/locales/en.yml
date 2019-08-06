@@ -118,4 +118,7 @@ en:
     destroy:
       flash:
         success: "User deleted"
+<<<<<<< HEAD
         danger: "User can't be deleted"
+=======
+>>>>>>> Finish user edit, update, index, and destroy actions
