@@ -21,6 +21,10 @@ layouts:
   contact: "#"
   users: "#"
   setting: "#"
+controllers:
+  users:
+    index:
+      per_page: 4
 user:
   name:
     max_length: 50

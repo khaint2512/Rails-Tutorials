@@ -21,6 +21,16 @@
 
 en:
   hello: "Hello world"
+  controllers:
+    account_activations_controller:
+      edit:
+        flash:
+          success: "Account activated!"
+          danger: "Invalid activation link"
+    session_controller:
+      create:
+        message: "Check your email for the activation link."
+        message_warning: "Account not activated."
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
@@ -89,6 +99,16 @@ en:
     about:
       title: About
       body: This is the sample application for the tutorial.
+  user_mailer:
+    account_activation:
+      h1: "Sample App"
+      p: "find me in app/views/user_mailer/account_activation.html.erb"
+      greeting: "Hi"
+      subject: "Account activation"
+      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+    password_reset:
+      greeting: "Hi"
   users:
     user:
       delete: "Delete"
@@ -111,7 +131,7 @@ en:
         submit_button: "Create my account"
     create:
       flash:
-        success: "Welcome to the Sample App!"
+        info: "Please check your email to activate your account."
     update:
       flash:
         success: "Profile updated"
