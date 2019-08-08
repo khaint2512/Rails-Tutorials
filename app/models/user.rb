@@ -43,6 +43,7 @@ class User < ApplicationRecord
     UserMailer.account_activation(self).deliver_now
   end
 
+<<<<<<< HEAD
   def create_reset_digest
     self.reset_token = User.new_token
     update reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now
@@ -56,6 +57,8 @@ class User < ApplicationRecord
     reset_sent_at < Settings.user.time_reset_password.hours.ago
   end
 
+=======
+>>>>>>> Edited
   private
 
   def downcase_email
