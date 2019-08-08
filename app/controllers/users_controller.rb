@@ -64,12 +64,6 @@ class UsersController < ApplicationController
 
   private
 
-  def load_user
-    @user = User.find_by id: params[:id]
-    return @user if @user
-    render file: "public/404.html", status: :user_not_found
-  end
-
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
   end

@@ -36,3 +36,4 @@ user:
   gravatar_edit: "http://gravatar.com/emails"
   gravatar_size: 80
   gravatar_user: 50
+  time_reset_password: 2
