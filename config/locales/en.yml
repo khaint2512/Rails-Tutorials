@@ -31,14 +31,11 @@ en:
       create:
         message: "Check your email for the activation link."
         message_warning: "Account not activated."
-<<<<<<< HEAD
     password_resets_controller:
       create:
         flash:
           info: "Email sent with password reset instructions"
           danger: "Email address not found"
-=======
->>>>>>> Edited
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
