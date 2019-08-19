@@ -10,6 +10,7 @@ gem "rails", "5.1.6"
 gem "bcrypt", "3.1.12"
 gem "ffaker"
 gem "kaminari"
+gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "3.3.7"
 gem "i18n-js"
 gem "sqlite3"
@@ -24,6 +25,7 @@ gem "jbuilder", "~> 2.5"
 group :development, :test do
   gem "byebug", platform: :mri
   gem "mysql2", ">= 0.4.4", " <0.6.0"
+  gem 'listen', '~> 3.1', '>= 3.1.5'
 end
 
 group :development do
