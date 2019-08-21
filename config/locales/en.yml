@@ -92,6 +92,13 @@ en:
     error_messages:
       alert: "The form contains"
       errors: "errors"
+    user_info:
+      view: "view my profile"
+    micropost_form:
+      button: "Post"
+    stats:
+      following: "following"
+      followers: "followers"
   static_pages:
     base:
       header: "StaticPage"
@@ -140,6 +147,14 @@ en:
       p2: "This link will expire in two hours."
       p3: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
   users:
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
+    following:
+      following: "Following"
+    followers:
+      followers: "Followers"
     user:
       delete: "Delete"
       confirm: "You sure ?"
@@ -168,3 +183,7 @@ en:
     destroy:
       flash:
         success: "User deleted"
+      danger: "User can't be deleted"
+    show_follow:
+      view_profile: "view my profile"
+      micropost: "Microposts:"

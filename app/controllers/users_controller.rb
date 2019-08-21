@@ -1,21 +1,4 @@
 class UsersController < ApplicationController
-<<<<<<< HEAD
-<<<<<<< HEAD
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update]
-  before_action :admin_user, only: :destroy
-
-  def index
-    @users = User.paginate page: params[:page]
-=======
-  before_action :logged_in_user, only: %i(:index, :edit, :update, :destroy)
-  before_action :correct_user, only: %i(:edit, :update)
-  before_action :admin_user, only: :destroy
-
-  def index
-    @users = User.paginates_per page: params[:page]
->>>>>>> Start chapter 10
-=======
   before_action :logged_in_user, only: %i(index, edit, update, destroy)
   before_action :correct_user, only: %i(edit, update)
   before_action :admin_user, only: %i(destroy)
@@ -23,7 +6,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.page(params[:page]).per Settings.controllers.users.index.per_page
->>>>>>> Edited
   end
 
   def show
@@ -74,6 +56,53 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def edit
+    @user = User.find_by id: params[:id]
+    return @user if @user
+    render file: "public/404.html", status: :user_not_found
+  end
+
+  def update
+    if @user.update user_params
+      flash[:success] = t ".flash.success"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @user.destroy
+      flash[:success] = t ".flash.success"
+    else
+      flash[:danger] = t ".flash.danger"
+    end
+    redirect_to users_url
+  end
+
+  def update
+    if @user.update user_params
+      flash[:success] = t ".flash.success"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
+  def following
+    @title = t ".following"
+    @user = User.find_by id: params[:id]
+    @users = User.page(params[:page]).per Settings.controllers.users.index.per_page
+    render :show_follow
+  end
+
+  def followers
+    @title = t ".followers"
+    @user = User.find_by id: params[:id]
+    @users = User.page(params[:page]).per Settings.controllers.users.index.per_page
+    render :show_follow
   end
 
   private
