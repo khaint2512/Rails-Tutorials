@@ -31,11 +31,12 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find_by id: params[:id]
+    return @user if @user
+    render file: "public/404.html", status: :user_not_found
   end
 
   def update
-    @user = User.find_by id: params[:id]
-    if @user.update_attributes(user_params)
+    if @user.update user_params
       flash[:success] = t ".flash.success"
       redirect_to @user
     else
