@@ -37,3 +37,9 @@ user:
   gravatar_size: 80
   gravatar_user: 50
   time_reset_password: 2
+micropost:
+  content:
+    max_length: 140
+  gravatar_size: 50
+show_follow:
+  gravatar_size: 30

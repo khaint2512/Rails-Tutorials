@@ -76,7 +76,7 @@ en:
         danger: "can't be empty"
         success: "Password has been reset."
     check_expiration:
-      flash:
+      flash:<<<<<<< following-users
         danger: "Password reset has expired."
   sessions:
     new:
@@ -92,7 +92,14 @@ en:
     error_messages:
       alert: "The form contains"
       errors: "errors"
-  static_pages:
+    user_info:
+      view: "view my profile"
+    micropost_form:
+      button: "Post"
+    stats:
+      following: "following"
+      followers: "followers"
+  static_pages:<<<<<<< following-users
     base:
       header: "StaticPage"
     about:
@@ -140,6 +147,14 @@ en:
       p2: "This link will expire in two hours."
       p3: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
   users:
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
+    following:
+      following: "Following"
+    followers:
+      followers: "Followers"
     user:
       delete: "Delete"
       confirm: "You sure ?"
@@ -149,9 +164,9 @@ en:
       password_confirmation: "Confirmation"
       button: "Save changes"
       change: "change"
+      danger: "Please log in."
     index:
       title: "All users"
-      danger: "Please log in."
     new:
       title: "Sign up"
       header: "Sign up"
@@ -169,3 +184,6 @@ en:
       flash:
         success: "User deleted"
       danger: "User can't be deleted"
+    show_follow:
+      view_profile: "view my profile"
+      micropost: "Microposts:"

@@ -45,6 +45,36 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    User.find_by id: (params[:id]).destroy
+    flash[:success] = t ".flash.success"
+    redirect_to users_url
+  end
+
+  def update
+    if @user.update user_params
+      flash[:success] = t ".flash.success"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
+  def edit
+    @user = User.find_by id: params[:id]
+    return @user if @user
+    render file: "public/404.html", status: :user_not_found
+  end
+
+  def update
+    if @user.update user_params
+      flash[:success] = t ".flash.success"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
+  def destroy
     if @user.destroy
       flash[:success] = t ".flash.success"
     else
@@ -62,10 +92,34 @@ class UsersController < ApplicationController
     end
   end
 
+  def following
+    @title = t ".following"
+    @user = User.find_by id: params[:id]
+    @users = User.page(params[:page]).per Settings.controllers.users.index.per_page
+    render :show_follow
+  end
+
+  def followers
+    @title = t ".followers"
+    @user = User.find_by id: params[:id]
+    @users = User.page(params[:page]).per Settings.controllers.users.index.per_page
+    render :show_follow
+  end
+
   private
 
-  def user_params
-    params.require(:user).permit :name, :email, :password, :password_confirmation
+  def load_user
+    @user = User.find_by id: params[:id]
+    return @user if @user
+    render file: "public/404.html", status: :user_not_found
+  end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t ".danger"
+      redirect_to login_url
+    end
   end
 
   def logged_in_user
